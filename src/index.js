@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
 	Navigation,
 	Footer,
-	Home,
+	Dashboard,
 	Properties,
 	Estate,
 	Estates,
@@ -19,7 +19,7 @@ ReactDOM.render(
 	<Router>
 		<Navigation />
 		<Routes>
-			<Route path="/" element={<Home />} />
+			<Route path="/" element={<Dashboard />} />
 			<Route path="/properties" element={<Properties />}>
 				<Route path="" element={<Estates />} />
 				<Route path=":postSlug" element={<Estate />} />
