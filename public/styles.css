@@ -1,0 +1,35 @@
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"Alerts ToDo ToDo"
+		"Alerts Messages Properties"
+		"Alerts Messages Properties";
+
+	grid-template-rows: 20rem 15rem 14rem;
+	gap: 10px;
+	background-color: #2196f3;
+	padding: 10px;
+}
+
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+}
+
+.item1 {
+	grid-area: Alerts;
+}
+
+.item2 {
+	grid-area: ToDo;
+}
+
+.item3 {
+	grid-area: Messages;
+}
+
+.item4 {
+	grid-area: Properties;
+}

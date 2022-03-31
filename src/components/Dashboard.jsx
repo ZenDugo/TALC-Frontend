@@ -4,23 +4,11 @@ function Dashboard() {
 	return (
 		<div className="home">
 			<div class="container">
-				<div class="row align-items-center my-5">
-					<div class="col-lg-7">
-						<img
-							class="img-fluid rounded mb-4 mb-lg-0"
-							src="http://placehold.it/900x400"
-							alt=""
-						/>
-					</div>
-					<div class="col-lg-5">
-						<h1 class="font-weight-light">Dashboard</h1>
-						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry's standard dummy text
-							ever since the 1500s, when an unknown printer took a galley of
-							type and scrambled it to make a type specimen book.
-						</p>
-					</div>
+				<div class="grid-container">
+					<div class="item1">1</div>
+					<div class="item2">2</div>
+					<div class="item3">3</div>
+					<div class="item4">4</div>
 				</div>
 			</div>
 		</div>
