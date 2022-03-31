@@ -3,14 +3,14 @@ import React from "react";
 function Dashboard() {
 	return (
 		<div className="home">
-			<div class="container">
-				<div class="grid-container">
-					<div class="item1">1</div>
-					<div class="item2">2</div>
-					<div class="item3">3</div>
-					<div class="item4">4</div>
+			<body>
+				<header>Header</header>
+				<div id="main">
+					<section class="properties-section">Properties</section>
+					<section class="messages-section">Messages</section>
+					<section class="requests-section">Requests</section>
 				</div>
-			</div>
+			</body>
 		</div>
 	);
 }

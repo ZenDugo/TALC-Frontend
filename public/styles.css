@@ -1,35 +1,41 @@
-.grid-container {
-	display: grid;
-	grid-template-areas:
-		"Alerts ToDo ToDo"
-		"Alerts Messages Properties"
-		"Alerts Messages Properties";
-
-	grid-template-rows: 20rem 15rem 14rem;
-	gap: 10px;
-	background-color: #2196f3;
-	padding: 10px;
+* {
+	box-sizing: border-box;
 }
-
-.grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
-	text-align: center;
-	padding: 20px 0;
-	font-size: 30px;
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	margin: 0;
 }
-
-.item1 {
-	grid-area: Alerts;
+#main {
+	display: flex;
+	flex: 1;
 }
-
-.item2 {
-	grid-area: ToDo;
+#main > .properties-section {
+	flex: 1;
 }
-
-.item3 {
-	grid-area: Messages;
+#main > .messages-section,
+#main > .requests-section {
+	flex: 0 0 20vw;
+	background: beige;
 }
-
-.item4 {
-	grid-area: Properties;
+#main > .messages-section {
+	order: -1;
+}
+header,
+footer {
+	background: yellowgreen;
+	height: 20vh;
+}
+header,
+footer,
+.properties-section,
+.messages-section,
+.properties-section {
+	padding: 1em;
+}
+@media screen and (max-width: 800px) {
+	#main {
+		display: block;
+	}
 }
