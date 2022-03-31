@@ -1,41 +1,4 @@
-* {
-	box-sizing: border-box;
-}
 body {
-	display: flex;
 	min-height: 100vh;
-	flex-direction: column;
 	margin: 0;
-}
-#main {
-	display: flex;
-	flex: 1;
-}
-#main > .properties-section {
-	flex: 1;
-}
-#main > .messages-section,
-#main > .requests-section {
-	flex: 0 0 20vw;
-	background: beige;
-}
-#main > .messages-section {
-	order: -1;
-}
-header,
-footer {
-	background: yellowgreen;
-	height: 20vh;
-}
-header,
-footer,
-.properties-section,
-.messages-section,
-.properties-section {
-	padding: 1em;
-}
-@media screen and (max-width: 800px) {
-	#main {
-		display: block;
-	}
 }

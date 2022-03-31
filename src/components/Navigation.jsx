@@ -1,34 +1,31 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navigation() {
 	return (
 		<div className="navigation">
-			<nav className="navbar navbar-expand py-5 navbar-dark bg-dark">
-				<div className="container">
-					<NavLink className="navbar-brand" to="/">
-						React Multi-Page Website
-					</NavLink>
-					<div>
-						<ul className="navbar-nav ml-auto">
-							<li className="nav-item">
-								<NavLink className="nav-link" to="/">
-									Dashboard
-									<span className="sr-only">(current)</span>
-								</NavLink>
-							</li>
-							<li className="nav-item">
-								<NavLink className="nav-link" to="/properties">
-									Properties
-								</NavLink>
-							</li>
-							<li className="nav-item">
-								<NavLink className="nav-link" to="/messages">
-									Messages
-								</NavLink>
-							</li>
-						</ul>
-					</div>
+			<nav className="navbar navbar-dark bg-dark navbar-expand-lg py-4">
+				<Link to="/" className="navbar-brand">
+					TALC
+				</Link>
+				<div className="collapse navbar-collapse">
+					<ul className="navbar-nav mr-auto">
+						<li className="navbar-item">
+							<Link to="/" className="nav-link">
+								Dashboard
+							</Link>
+						</li>
+						<li className="navbar-item">
+							<Link to="/properties" className="nav-link">
+								Properties
+							</Link>
+						</li>
+						<li className="navbar-item">
+							<Link to="/messages" className="nav-link">
+								Messages
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		</div>
