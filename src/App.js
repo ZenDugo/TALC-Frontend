@@ -9,6 +9,7 @@ import {
 	Chat,
 	Chats,
 	Messages,
+	CreateEstate,
 } from "./components";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Dashboard />} />
 						<Route path="/properties" element={<Properties />}>
+							<Route path="" element={<CreateEstate />} />
 							<Route path="" element={<Estates />} />
 							<Route path=":postSlug" element={<Estate />} />
 						</Route>
@@ -28,7 +30,7 @@ function App() {
 							<Route path=":chatSlug" element={<Chat />} />
 						</Route>
 					</Routes>
-					<Footer />
+					{/* <Footer /> */}
 				</div>
 			</Router>
 		</div>

@@ -8,7 +8,7 @@ function Chat() {
 
 	return (
 		<div className="home">
-			<div class="container">
+			<div className="container">
 				<h1 className="mt-5">This is all of you Chats</h1>
 				<h6 className="mb-5">The chat slug is, {chatSlug}</h6>
 				<p>Chat Message</p>

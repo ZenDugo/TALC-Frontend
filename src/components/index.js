@@ -7,3 +7,4 @@ export { default as Properties } from "./properties/Properties";
 export { default as Chat } from "./messages/Chat";
 export { default as Chats } from "./messages/Chats";
 export { default as Messages } from "./messages/Messages";
+export { default as CreateEstate } from "./properties/Create-Estate";

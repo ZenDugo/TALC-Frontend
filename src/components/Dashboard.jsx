@@ -1,11 +1,7 @@
 import React from "react";
 
 function Dashboard() {
-	return (
-		<div className="home">
-			<body></body>
-		</div>
-	);
+	return;
 }
 
 export default Dashboard;

@@ -3,14 +3,12 @@ import { Outlet } from "react-router-dom";
 
 function Messages() {
 	return (
-		<body>
-			<div className="home">
-				<div className="container">
-					<h1 className="text-center mt-5">Messages Page</h1>
-					<Outlet />
-				</div>
+		<div className="home">
+			<div className="container">
+				<h1 className="text-center mt-5">Messages Page</h1>
+				<Outlet />
 			</div>
-		</body>
+		</div>
 	);
 }
 

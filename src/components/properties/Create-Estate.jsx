@@ -1,34 +1,35 @@
 import React from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default class CreateEstate extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.onChangeUsername = this.onChangeUsername.bind(this);
+		this.onChangeNickname = this.onChangeNickname.bind(this);
 		this.onChangeAddress = this.onChangeAddress.bind(this);
 		this.onChangeDescription = this.onChangeDescription.bind(this);
 		this.onChangeTenant = this.onChangeTenant.bind(this);
 		this.onChangeDate = this.onChangeDate.bind(this);
 
 		this.state = {
-			username: "",
+			nickname: "", //Will need to add uid later
 			address: "",
 			description: "",
-			tenant: "",
+			tenant: [],
 			date: new Date(),
 		};
 	}
 
 	componentDidMount() {
 		this.setState({
-			users: ["Reis"],
-			username: "Reis",
+			tenant: ["Madison"], // Will fill up with dynamic tenants based on landlord account
 		});
 	}
 
-	onChangeUsername(e) {
+	onChangeNickname(e) {
 		this.setState({
-			username: e.target.value,
+			nickname: e.target.value,
 		});
 	}
 
@@ -60,7 +61,7 @@ export default class CreateEstate extends React.Component {
 		e.preventDefault();
 
 		const estate = {
-			username: this.state.username,
+			nickname: this.state.nickname,
 			description: this.state.description,
 			address: this.state.address,
 			tenant: this.state.tenant,
@@ -75,26 +76,17 @@ export default class CreateEstate extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>Create New Estate</h3>
+				<h3>Add New Estate</h3>
 				<form onSubmit={this.onSubmit}>
 					<div className="form-group">
-						<label for="uName">Username: </label>
-						<select
-							ref="userInput"
-							required
+						<label for="uName">Property Nickname: </label>
+						<input
+							type="text"
 							id="uName"
 							className="form-control"
-							value={this.state.username}
-							onChange={this.onChangeUsername}
-						>
-							{this.state.users.map((user) => {
-								return (
-									<option key={user} value={user}>
-										{user}
-									</option>
-								);
-							})}
-						</select>
+							value={this.state.nickname}
+							onChange={this.onChangeNickname}
+						/>
 					</div>
 					<div className="form-group">
 						<label for="addr">Address: </label>
@@ -109,17 +101,26 @@ export default class CreateEstate extends React.Component {
 					</div>
 					<div className="form-group">
 						<label for="tent">Tenant: </label>
-						<input
-							type="text"
+						<select
+							ref="userInput"
+							required
 							id="tent"
 							className="form-control"
 							value={this.state.tenant}
 							onChange={this.onChangeTenant}
-						/>
+						>
+							{this.state.tenant.map((tenant) => {
+								return (
+									<option key={tenant} value={tenant}>
+										{tenant}
+									</option>
+								);
+							})}
+						</select>
 					</div>
 					<div className="form-group">
 						<label for="desp">Description: </label>
-						<input
+						<textarea
 							type="text"
 							required
 							id="desp"
