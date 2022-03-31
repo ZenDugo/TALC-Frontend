@@ -4,3 +4,6 @@ export { default as Home } from "./Home";
 export { default as Estate } from "./properties/Estate";
 export { default as Estates } from "./properties/Estates";
 export { default as Properties } from "./properties/Properties";
+export { default as Chat } from "./messages/Chat";
+export { default as Chats } from "./messages/Chats";
+export { default as Messages } from "./messages/Messages";

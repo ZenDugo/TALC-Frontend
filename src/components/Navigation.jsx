@@ -22,6 +22,11 @@ function Navigation() {
 									Properties
 								</NavLink>
 							</li>
+							<li className="nav-item">
+								<NavLink className="nav-link" to="/messages">
+									Messages
+								</NavLink>
+							</li>
 						</ul>
 					</div>
 				</div>
