@@ -10,28 +10,31 @@ import {
 	Chats,
 	Messages,
 	CreateEstate,
+	Login,
+	Register,
+	Reset,
 } from "./components";
 
 function App() {
 	return (
 		<div>
 			<Router>
-				<div>
-					<Navigation />
-					<Routes>
-						<Route path="/" element={<Dashboard />} />
-						<Route path="/properties" element={<Properties />}>
-							<Route path="" element={<CreateEstate />} />
-							<Route path="" element={<Estates />} />
-							<Route path=":postSlug" element={<Estate />} />
-						</Route>
-						<Route path="/messages" element={<Messages />}>
-							<Route path="" element={<Chats />} />
-							<Route path=":chatSlug" element={<Chat />} />
-						</Route>
-					</Routes>
-					{/* <Footer /> */}
-				</div>
+				<Routes>
+					<Route path="/" element={<Login />} />
+					<Route path="/register" element={<Register />} />
+					<Route path="/reset" element={<Reset />} />
+					<Route path="/dashboard" element={<Dashboard />} />
+					<Route path="/properties" element={<Properties />}>
+						<Route path="" element={<Estates />} />
+						<Route path=":postSlug" element={<Estate />} />
+					</Route>
+					<Route path="/properties/create" element={<CreateEstate />} />
+					<Route path="/messages" element={<Messages />}>
+						<Route path="" element={<Chats />} />
+						<Route path=":chatSlug" element={<Chat />} />
+					</Route>
+				</Routes>
+				{/* <Footer /> */}
 			</Router>
 		</div>
 	);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function Properties() {
 	return (
@@ -8,6 +8,11 @@ function Properties() {
 				<div className="container">
 					<h1 className="text-center mt-5">Properties Page</h1>
 					<Outlet />
+					<div>
+						<Link className="btn btn-primary btn-lg" to="/properties/create">
+							Create
+						</Link>
+					</div>
 				</div>
 			</div>
 		</body>

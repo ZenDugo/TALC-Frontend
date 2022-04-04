@@ -75,7 +75,7 @@ export default class CreateEstate extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="container">
 				<h3>Add New Estate</h3>
 				<form onSubmit={this.onSubmit}>
 					<div className="form-group">

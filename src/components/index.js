@@ -8,3 +8,6 @@ export { default as Chat } from "./messages/Chat";
 export { default as Chats } from "./messages/Chats";
 export { default as Messages } from "./messages/Messages";
 export { default as CreateEstate } from "./properties/Create-Estate";
+export { default as Login } from "./session/Login";
+export { default as Register } from "./session/Register";
+export { default as Reset } from "./session/Reset";
